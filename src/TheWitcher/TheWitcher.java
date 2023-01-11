@@ -3,6 +3,7 @@ package TheWitcher;
 public class TheWitcher {
 	private String name;
 	private int health;
+	private boolean isDead;
 	private boolean hasSoul;
 	
 	public String getName() {
@@ -29,10 +30,33 @@ public class TheWitcher {
 		this.hasSoul = hasSoul;
 	}
 
+	public boolean isDead() {
+		if(health==0) {
+			return true;
+		}else if (!hasSoul){
+			return  true;
+		}else {
+			return false;
+		}
+	}
+
+	public void setDead(boolean isDead) {
+		this.isDead = isDead;
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		TheWitcher brujo = new TheWitcher();
+		brujo.setName("Carlos");
+		brujo.setHealth(15);
+		brujo.setHasSoul(true);
+		if(brujo.isDead()){
+			System.out.println(brujo.getName()+" esta muerto");
+		}else {
+			System.out.println(brujo.getName()+" esta vivo");
+		}
 	}
+
+	
 
 	
 }
