@@ -43,4 +43,7 @@ public class TheWitcher {
 	public void setDead(boolean isDead) {
 		this.isDead = isDead;
 	}
+	public void giveDamage(int damage){
+		damage=damage+10;
+		}
 }
